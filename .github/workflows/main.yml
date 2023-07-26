@@ -22,10 +22,10 @@ jobs:
           dotnet-version: 6.0.x
 
       - name: Install dependencies
-        run: dotnet restore src\Calabonga.RulesValidator.sln
+        run: dotnet restore src/Calabonga.RulesValidator/Calabonga.RulesValidator.sln
 
       - name: Build the NuGet package
-        run: dotnet build src\Calabonga.RulesValidator.sln --configuration Release --output ${{env.DOTNET_ROOT}}\Package
+        run: dotnet build src/Calabonga.RulesValidator/Calabonga.RulesValidator.sln --configuration Release --output ${{env.DOTNET_ROOT}}\Package
 
       - name: Publish NuGet Package Calabonga.RulesValidator
         run: dotnet nuget push ${{env.DOTNET_ROOT}}\Package\*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
