@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;netstandard2.1</TargetFrameworks>
+    <RuntimeFrameworkVersion Condition="'$(TargetFramework)' == 'netcoreapp2.2'">2.2.0-*</RuntimeFrameworkVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
     <PackageProjectUrl>https://www.calabonga.net</PackageProjectUrl>
     <PackageTags>calabonga validation rules helper validator rule generic framework base rulevalidator</PackageTags>
@@ -15,6 +16,8 @@
     <Product>RuleValidator for entity</Product>
     <Description>RuleValidator for entity validation base on custom rules</Description>
     <PackageId>Calabonga.RulesValidator</PackageId>
+    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <FileVersion>2.0.1.0</FileVersion>
     <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
