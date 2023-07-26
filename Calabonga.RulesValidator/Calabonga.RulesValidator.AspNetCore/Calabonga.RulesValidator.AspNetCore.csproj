@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.2;netcoreapp3.1;netstandard2.1</TargetFrameworks>
+    <RuntimeFrameworkVersion Condition="'$(TargetFramework)' == 'netcoreapp2.2'">2.2.0-*</RuntimeFrameworkVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Calabonga</Authors>
+    <Company>Calabonga SOFT</Company>
+    <Product>Extension for RuleValidator for ASP.NET Core</Product>
+    <Description>RuleValidator for entity validation base on custom rules. And this is a helper for registration</Description>
+    <Copyright>Calabonga SOFT © 2019</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://www.calabonga.net</PackageProjectUrl>
+    <PackageTags>calabonga validation rules helper validator rule generic framework base extensions rulevalidator</PackageTags>
+    <PackageReleaseNotes>small improvments</PackageReleaseNotes>
+    <Version>2.0.0</Version>
+    <FileVersion>2.0.0</FileVersion>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
+    <PackageIcon>logo.png</PackageIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.2|AnyCPU'">
+    <OutputPath>D:\Calabonga\Nuget\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="logo.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Calabonga.RulesValidator" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+</Project>
