@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
-    <RuntimeFrameworkVersion Condition="'$(TargetFramework)' == 'netcoreapp2.2'">2.2.0-*</RuntimeFrameworkVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>2.0.1-beta1</Version>
     <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
@@ -24,15 +23,6 @@
     <AssemblyVersion>2.0.1</AssemblyVersion>
     <FileVersion>2.0.1</FileVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Calabonga.RulesValidator.AspNetCore\**" />
-    <Compile Remove="_ReSharper.Caches\**" />
-    <EmbeddedResource Remove="Calabonga.RulesValidator.AspNetCore\**" />
-    <EmbeddedResource Remove="_ReSharper.Caches\**" />
-    <None Remove="Calabonga.RulesValidator.AspNetCore\**" />
-    <None Remove="_ReSharper.Caches\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\..\README.md">
