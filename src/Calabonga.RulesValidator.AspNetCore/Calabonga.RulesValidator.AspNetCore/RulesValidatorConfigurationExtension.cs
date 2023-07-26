@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Calabonga.RulesValidator.AspNetCore
 {
@@ -13,7 +13,7 @@ namespace Calabonga.RulesValidator.AspNetCore
         /// </summary>
         /// <param name="services"></param>
         /// <param name="config"></param>
-        public static void ConfigureValidatorFor<T>(this IServiceCollection services, Action<IValidatorConfiguration<T>> config) where T : class
+        public static void AddValidatorFor<T>(this IServiceCollection services, Action<IValidatorConfiguration<T>> config) where T : class
         {
             if (config == null)
             {

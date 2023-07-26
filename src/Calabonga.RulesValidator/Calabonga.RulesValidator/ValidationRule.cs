@@ -11,7 +11,7 @@ namespace Calabonga.RulesValidator
         /// <summary>
         /// Name for the rule
         /// </summary>
-        public abstract string Name { get; }
+        public virtual string Name => GetType().Name;
 
         /// <summary>
         /// User friendly display name
@@ -21,7 +21,7 @@ namespace Calabonga.RulesValidator
         /// <summary>
         /// Return order index for rules sorting
         /// </summary>
-        public abstract int OrderIndex { get; }
+        public virtual int OrderIndex { get; } = 0;
 
         /// <summary>
         /// Create criteria
@@ -46,7 +46,7 @@ namespace Calabonga.RulesValidator
                 throw new ArgumentNullException($"{nameof(entity)} is NULL");
             }
             var func = GetCriteria();
-            return func.Invoke(entity) 
+            return func.Invoke(entity)
                 ? Task.FromResult<IValidatorResult<T>>(new FirstTriggeredValidationResult<T>(this, entity))
                 : Task.FromResult<IValidatorResult<T>>(new EmptyValidationResult<T>(entity));
         }
