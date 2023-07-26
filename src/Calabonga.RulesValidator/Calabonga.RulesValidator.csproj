@@ -1,32 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;netstandard2.1</TargetFrameworks>
+    <RuntimeFrameworkVersion Condition="'$(TargetFramework)' == 'netcoreapp2.2'">2.2.0-*</RuntimeFrameworkVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
-    <PackageProjectUrl>https://www.calabonga.net/blog/post/proverka-obekta-na-osnove-pravil-validacii</PackageProjectUrl>
+    <PackageProjectUrl>https://www.calabonga.net</PackageProjectUrl>
     <PackageTags>calabonga validation rules helper validator rule generic framework base rulevalidator</PackageTags>
     <PackageReleaseNotes>Asynchronious Validation implemented</PackageReleaseNotes>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <Copyright>Calabonga SOFT © 2019-2023</Copyright>
     <Authors>Calabonga</Authors>
     <Company>Calabonga SOFT</Company>
-    <Product>RulesValidator</Product>
-    <Description>RulesValidator for entity validation base on custom rules</Description>
+    <Product>RuleValidator for entity</Product>
+    <Description>RuleValidator for entity validation base on custom rules</Description>
     <PackageId>Calabonga.RulesValidator</PackageId>
+    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <FileVersion>2.0.1.0</FileVersion>
     <PackageIcon>logo.png</PackageIcon>
-    <Title>Validation pipeline for yours entities</Title>
-    <RepositoryUrl>https://github.com/Calabonga/Calabonga.RulesValidator</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
     <None Include="logo.png" Pack="true" PackagePath="" />
   </ItemGroup>
 

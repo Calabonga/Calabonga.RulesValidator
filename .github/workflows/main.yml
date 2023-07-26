@@ -17,19 +17,19 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Set up .NET Core
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 6.0.x
 
       - name: Install dependencies
-        run: dotnet restore Calabonga.RulesValidator/Calabonga.RulesValidator
+        run: dotnet restore src/Calabonga.RulesValidator/Calabonga.RulesValidator
 
       - name: Build the NuGet package
-        run: dotnet build Calabonga.RulesValidator/Calabonga.RulesValidator.csproj --configuration Release --output ${{env.DOTNET_ROOT}}\Package
+        run: dotnet build src/Calabonga.RulesValidator/Calabonga.RulesValidator.csproj --configuration Release --output ${{env.DOTNET_ROOT}}\Package
 
-      - run: ls Calabonga.RulesValidator
+      - run: ls src/Calabonga.RulesValidator
       
-      - run: ls Calabonga.RulesValidator/Calabonga.RulesValidator
+      - run: ls src/Calabonga.RulesValidator/Calabonga.RulesValidator
       
       - run: ls ${{env.DOTNET_ROOT}}\Package
 

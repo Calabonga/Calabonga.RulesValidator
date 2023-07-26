@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.RulesValidatorDemo.Web", "Calabonga.RulesValidator.Demo\Calabonga.RulesValidator.Demo.Web\Calabonga.RulesValidatorDemo.Web.csproj", "{4DEF4958-006C-4C77-81DA-C24216384373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.RulesValidator.Demo.Data", "Calabonga.RulesValidator.Demo\Calabonga.RulesValidator.Demo.Data\Calabonga.RulesValidator.Demo.Data.csproj", "{1829D58D-4CCE-463F-A11D-C2817F90D3D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.RulesValidator.Demo.Models", "Calabonga.RulesValidator.Demo\Calabonga.RulesValidator.Demo.Models\Calabonga.RulesValidator.Demo.Models.csproj", "{8E67D3DE-89C0-4E36-A9A2-2A968C7120A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.RulesValidator.Demo.Core", "Calabonga.RulesValidator.Demo\Calabonga.RulesValidator.Demo.Core\Calabonga.RulesValidator.Demo.Core.csproj", "{381408D8-EAC6-4595-801C-1F6608DC4241}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DEF4958-006C-4C77-81DA-C24216384373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEF4958-006C-4C77-81DA-C24216384373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEF4958-006C-4C77-81DA-C24216384373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEF4958-006C-4C77-81DA-C24216384373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1829D58D-4CCE-463F-A11D-C2817F90D3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1829D58D-4CCE-463F-A11D-C2817F90D3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1829D58D-4CCE-463F-A11D-C2817F90D3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1829D58D-4CCE-463F-A11D-C2817F90D3D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E67D3DE-89C0-4E36-A9A2-2A968C7120A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E67D3DE-89C0-4E36-A9A2-2A968C7120A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E67D3DE-89C0-4E36-A9A2-2A968C7120A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E67D3DE-89C0-4E36-A9A2-2A968C7120A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381408D8-EAC6-4595-801C-1F6608DC4241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381408D8-EAC6-4595-801C-1F6608DC4241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381408D8-EAC6-4595-801C-1F6608DC4241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381408D8-EAC6-4595-801C-1F6608DC4241}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ECE6014-8A27-458C-B561-4ED1F44B80C8}
+	EndGlobalSection
+EndGlobal
