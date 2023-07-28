@@ -22,7 +22,7 @@ jobs:
           dotnet-version: 6.0.x
              
       - name: Install dependencies Calabonga.RulesValidator.AspNetCore
-       run: dotnet restore src/Calabonga.RulesValidator.AspNetCore/Calabonga.RulesValidator.AspNetCore.sln
+        run: dotnet restore src/Calabonga.RulesValidator.AspNetCore/Calabonga.RulesValidator.AspNetCore.sln
 
       - name: Build the NuGet package Calabonga.RulesValidator
         run: dotnet build src/Calabonga.RulesValidator.AspNetCore/Calabonga.RulesValidator.AspNetCore.sln --configuration Release --output ${{env.DOTNET_ROOT}}\Package2
