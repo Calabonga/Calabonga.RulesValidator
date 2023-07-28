@@ -13,7 +13,7 @@
         <PackageProjectUrl>https://www.calabonga.net/blog/post/proverka-obekta-na-osnove-pravil-validacii</PackageProjectUrl>
         <PackageTags>calabonga validation rules helper validator rule generic framework base extensions rulevalidator</PackageTags>
         <PackageReleaseNotes>small improvments</PackageReleaseNotes>
-        <Version>2.0.2-beta2</Version>
+        <Version>2.0.2</Version>
         <FileVersion>2.0.2</FileVersion>
         <AssemblyVersion>2.0.2</AssemblyVersion>
         <PackageIcon>logo.png</PackageIcon>
@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Calabonga.RulesValidator" Version="2.0.2-beta2" />
+      <PackageReference Include="Calabonga.RulesValidator" Version="2.0.2" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     </ItemGroup>
 
