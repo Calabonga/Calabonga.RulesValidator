@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
     <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
     <PackageProjectUrl>https://www.calabonga.net/blog/post/proverka-obekta-na-osnove-pravil-validacii</PackageProjectUrl>
     <PackageTags>calabonga validation rules helper validator rule generic framework base rulevalidator</PackageTags>
@@ -20,8 +20,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/Calabonga/Calabonga.RulesValidator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <AssemblyVersion>2.0.1</AssemblyVersion>
-    <FileVersion>2.0.1</FileVersion>
+    <AssemblyVersion>2.0.2</AssemblyVersion>
+    <FileVersion>2.0.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
