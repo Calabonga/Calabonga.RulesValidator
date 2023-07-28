@@ -1,9 +1,6 @@
-name: .NET Core 6.0.x
+name: Calabonga.RulesValidator.AspNetCore
 
-on:
-  push:
-    branches: [master]
-  
+on: 
   workflow_dispatch:
 
 permissions:

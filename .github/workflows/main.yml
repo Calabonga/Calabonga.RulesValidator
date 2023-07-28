@@ -1,4 +1,4 @@
-name: .NET Core 6.0.x
+name: Calabonga.RulesValidator
 
 on:
   push:
