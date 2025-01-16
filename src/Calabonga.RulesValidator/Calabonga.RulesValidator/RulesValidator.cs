@@ -59,7 +59,7 @@ namespace Calabonga.RulesValidator
                         }
                     }
 
-                    return new EmptyValidationResult<T>(entity);
+                    return new NoErrorValidationResult<T>(entity);
 
                 case ValidatorMode.All:
                     var resultAll = new AllTriggeredValidationResult<T>(entity);

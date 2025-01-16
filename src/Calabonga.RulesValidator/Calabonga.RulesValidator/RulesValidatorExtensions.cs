@@ -4,11 +4,10 @@ using System.Linq;
 namespace Calabonga.RulesValidator
 {
     /// <summary>
-    /// Extensions for IRulesValidator<T>
+    /// Extensions for IRulesValidator{T}
     /// </summary>
     public static class RulesValidatorExtensions
     {
-
         /// <summary>
         /// Returns triggered rules
         /// </summary>

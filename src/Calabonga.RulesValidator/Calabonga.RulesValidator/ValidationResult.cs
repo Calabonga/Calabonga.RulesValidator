@@ -7,13 +7,19 @@ namespace Calabonga.RulesValidator
     /// </summary>
     public abstract class ValidationResult<T> : IValidatorResult<T>
     {
-        /// <inheritdoc />
+        /// <summary>
+        /// Indicates that the rule is fired
+        /// </summary>
         public abstract bool HasTriggered { get; }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Validation message text
+        /// </summary>
         public abstract IEnumerable<string> Errors { get; }
 
-        /// <inheritdoc />
+        /// <summary>
+        ///  Entity that has been validated
+        /// </summary>
         public T Entity { get; set; }
     }
 }

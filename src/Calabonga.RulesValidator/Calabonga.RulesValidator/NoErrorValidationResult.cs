@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Calabonga.RulesValidator
 {
     /// <summary>
     /// Empty result return when now rules triggered
     /// </summary>
-    public class EmptyValidationResult<T> : ValidationResult<T>
+    public sealed class NoErrorValidationResult<T> : ValidationResult<T>
     {
         /// <inheritdoc />
-        public EmptyValidationResult(T entity)
+        public NoErrorValidationResult(T entity)
         {
             Entity = entity;
         }
@@ -17,12 +18,6 @@ namespace Calabonga.RulesValidator
         public override bool HasTriggered => false;
 
         /// <inheritdoc />
-        public override IEnumerable<string> Errors
-        {
-            get
-            {
-                yield break;
-            }
-        }
+        public override IEnumerable<string> Errors => Enumerable.Empty<string>();
     }
 }

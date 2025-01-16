@@ -3,18 +3,18 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.2</Version>
+    <Version>3.0.0</Version>
     <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
     <PackageProjectUrl>https://www.calabonga.net/blog/post/proverka-obekta-na-osnove-pravil-validacii</PackageProjectUrl>
-    <PackageTags>calabonga validation rules helper validator rule generic framework base rulevalidator</PackageTags>
+    <PackageTags>calabonga validation rules helper validator rule generic rulevalidator</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Copyright>Calabonga SOFT © 2019-2023</Copyright>
+    <Copyright>Calabonga SOFT © 2019-2025</Copyright>
     <Authors>Calabonga</Authors>
     <Company>Calabonga SOFT</Company>
-    <Product>RuleValidator for entity</Product>
+    <Product>Entity validation through a rule set</Product>
     <Description>RuleValidator for entity validation base on custom rules</Description>
     <PackageId>Calabonga.RulesValidator</PackageId>
-    <PackageReleaseNotes>auto publication created</PackageReleaseNotes>
+    <PackageReleaseNotes>Actualized for NET 9.0</PackageReleaseNotes>
     <PackageIcon>logo.png</PackageIcon>
     <Title>Rules validation pipeline</Title>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -25,11 +25,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\README.md">
+    <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="logo.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
 </Project>

@@ -14,7 +14,7 @@ namespace Calabonga.RulesValidator
         public virtual string Name => GetType().Name;
 
         /// <summary>
-        /// User friendly display name
+        /// User-friendly display name
         /// </summary>
         public abstract string DisplayName { get; }
 
@@ -24,7 +24,7 @@ namespace Calabonga.RulesValidator
         public virtual int OrderIndex { get; } = 0;
 
         /// <summary>
-        /// Create criteria
+        /// Create criteria where shit rule should fire
         /// </summary>
         /// <returns></returns>
         protected abstract Func<T, bool> GetCriteria();
@@ -45,10 +45,12 @@ namespace Calabonga.RulesValidator
             {
                 throw new ArgumentNullException($"{nameof(entity)} is NULL");
             }
+
             var func = GetCriteria();
+
             return func.Invoke(entity)
-                ? Task.FromResult<IValidatorResult<T>>(new FirstTriggeredValidationResult<T>(this, entity))
-                : Task.FromResult<IValidatorResult<T>>(new EmptyValidationResult<T>(entity));
+                ? Task.FromResult<IValidatorResult<T>>(new ErrorValidationResult<T>(this, entity))
+                : Task.FromResult<IValidatorResult<T>>(new NoErrorValidationResult<T>(entity));
         }
     }
 }

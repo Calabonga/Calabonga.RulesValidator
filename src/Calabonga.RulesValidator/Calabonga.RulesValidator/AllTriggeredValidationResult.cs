@@ -17,7 +17,7 @@ namespace Calabonga.RulesValidator
         /// <summary>
         /// Triggered rules
         /// </summary>
-        public List<IValidatorResult<T>> TriggeredRules { get; } = new List<IValidatorResult<T>>();
+        private List<IValidatorResult<T>> TriggeredRules { get; } = new List<IValidatorResult<T>>();
 
         /// <inheritdoc />
         public override bool HasTriggered => TriggeredRules.Any();

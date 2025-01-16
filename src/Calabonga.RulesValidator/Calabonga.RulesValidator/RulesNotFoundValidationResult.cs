@@ -13,10 +13,14 @@ namespace Calabonga.RulesValidator
             Entity = entity;
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Indicates that the rule is fired
+        /// </summary>
         public override bool HasTriggered => false;
 
-        /// <inheritdoc />
-        public override IEnumerable<string> Errors => new[] { "Rules not found. Validation stopped" };
+        /// <summary>
+        /// Validation message text
+        /// </summary>
+        public override IEnumerable<string> Errors => new[] { "No rules were found. Validation process not started." };
     }
 }

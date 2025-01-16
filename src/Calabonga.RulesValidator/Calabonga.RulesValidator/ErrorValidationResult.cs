@@ -5,24 +5,32 @@ namespace Calabonga.RulesValidator
     /// <summary>
     /// Rule triggered result
     /// </summary>
-    public class FirstTriggeredValidationResult<T> : ValidationResult<T>
+    public sealed class ErrorValidationResult<T> : ValidationResult<T>
     {
-        public FirstTriggeredValidationResult(IRule rule, T entity)
+        public ErrorValidationResult(IRule rule, T entity)
         {
             Rule = rule;
             Entity = entity;
         }
 
-        public IRule Rule { get; }
+        /// <summary>
+        /// Triggered Rule
+        /// </summary>
+        private IRule Rule { get; }
 
+        /// <summary>
+        /// Indicates that the rule is fired
+        /// </summary>
         public override bool HasTriggered => Rule != null;
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Validation message text
+        /// </summary>
         public override IEnumerable<string> Errors
         {
             get
             {
-                if (!HasTriggered)
+                if (HasTriggered)
                 {
                     yield return $"{Rule.DisplayName} ({Rule.Name})";
                 }
