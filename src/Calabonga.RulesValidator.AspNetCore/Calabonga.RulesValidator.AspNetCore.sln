@@ -5,11 +5,6 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calabonga.RulesValidator.AspNetCore", "Calabonga.RulesValidator.AspNetCore\Calabonga.RulesValidator.AspNetCore.csproj", "{AEA4E091-1232-461A-B7CF-EBA72F63991E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0217B6D2-8DD7-4ED0-A452-E684A8706F32}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\.github\workflows\main2.yml = ..\..\.github\workflows\main2.yml
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
