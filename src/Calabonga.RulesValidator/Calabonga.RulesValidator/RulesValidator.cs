@@ -38,39 +38,61 @@ namespace Calabonga.RulesValidator
         /// <inheritdoc />
         public bool HasRules => Rules.Count > 0;
 
-        /// <inheritdoc />
-        public async Task<IValidatorResult<T>> ValidateAsync(T entity)
+        /// <summary>
+        /// Returns task for first fired rule that should be checked
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="dynamicRules"></param>
+        /// <returns></returns>
+        public async Task<IValidatorResult<T>> ValidateAsync(T entity, IEnumerable<IValidationRule<T>> dynamicRules = null)
         {
-            if (!HasRules)
+            if (!HasRules && dynamicRules == null)
             {
                 return new RulesNotFoundValidationResult<T>(entity);
+            }
+
+            if (dynamicRules != null)
+            {
+                foreach (var validationRule in dynamicRules)
+                {
+                    if (!Rules.Contains(validationRule))
+                    {
+                        Rules.Add(validationRule);
+                    }
+                }
             }
 
             switch (_configuration.ValidatorMode)
             {
                 case ValidatorMode.First:
+
                     foreach (var rule in Rules.OrderBy(x => x.OrderIndex))
                     {
                         var result = await rule.ValidateAsync(entity);
-                        if (result.HasTriggered)
+                        if (!result.HasTriggered)
                         {
-                            rule.IsTriggered = true;
-                            return result;
+                            continue;
                         }
+
+                        rule.IsTriggered = true;
+                        return result;
                     }
 
                     return new NoErrorValidationResult<T>(entity);
 
                 case ValidatorMode.All:
+
                     var resultAll = new AllTriggeredValidationResult<T>(entity);
                     foreach (var rule in Rules.OrderBy(x => x.OrderIndex))
                     {
                         var result = await rule.ValidateAsync(entity);
-                        if (result.HasTriggered)
+                        if (!result.HasTriggered)
                         {
-                            rule.IsTriggered = true;
-                            resultAll.AddResult(result);
+                            continue;
                         }
+
+                        rule.IsTriggered = true;
+                        resultAll.AddResult(result);
                     }
                     return resultAll;
 
