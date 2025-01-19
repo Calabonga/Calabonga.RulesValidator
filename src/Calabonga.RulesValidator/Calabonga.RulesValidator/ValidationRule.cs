@@ -27,7 +27,7 @@ namespace Calabonga.RulesValidator
         /// Create criteria where shit rule should fire
         /// </summary>
         /// <returns></returns>
-        protected abstract Func<T, bool> GetCriteria();
+        protected abstract Func<T, bool> ThrowWhen();
 
         /// <summary>
         /// Returns true when rules triggered
@@ -46,11 +46,28 @@ namespace Calabonga.RulesValidator
                 throw new ArgumentNullException($"{nameof(entity)} is NULL");
             }
 
-            var func = GetCriteria();
+            var func = ThrowWhen();
 
             return func.Invoke(entity)
                 ? Task.FromResult<IValidatorResult<T>>(new ErrorValidationResult<T>(this, entity))
                 : Task.FromResult<IValidatorResult<T>>(new NoErrorValidationResult<T>(entity));
+        }
+
+        public void SetContext(object context)
+        {
+            Context = context;
+        }
+
+        public object Context { get; private set; }
+    }
+
+    public abstract class DynamicValidationRule<TEntity, TParam> : ValidationRule<TEntity> where TEntity : class
+    {
+        protected TParam Parameter { get; }
+
+        protected DynamicValidationRule(TParam parameter)
+        {
+            Parameter = parameter;
         }
     }
 }

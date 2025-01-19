@@ -22,9 +22,9 @@ namespace Calabonga.RulesValidator
         /// Returns task for first fired rule that should be checked
         /// </summary>
         /// <param name="entity"></param>
+        /// <param name="dynamicRules"></param>
         /// <returns></returns>
-        Task<IValidatorResult<T>> ValidateAsync(T entity);
-
+        Task<IValidatorResult<T>> ValidateAsync(T entity, IEnumerable<IValidationRule<T>> dynamicRules = null);
 
         /// <summary>
         /// Represents rules to use in validation
