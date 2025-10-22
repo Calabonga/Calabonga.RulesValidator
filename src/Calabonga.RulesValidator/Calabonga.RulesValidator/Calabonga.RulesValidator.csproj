@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.1</TargetFrameworks>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>3.1.0</Version>
+		<Version>3.1.1</Version>
 		<PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
 		<PackageProjectUrl>https://www.calabonga.net/blog/post/proverka-obekta-na-osnove-pravil-validacii</PackageProjectUrl>
 		<PackageTags>calabonga validation rules helper validator rule generic rulevalidator</PackageTags>
@@ -14,7 +14,7 @@
 		<Product>Entity validation through a rule set</Product>
 		<Description>RuleValidator for entity validation base on custom rules</Description>
 		<PackageId>Calabonga.RulesValidator</PackageId>
-		<PackageReleaseNotes>DynamicRule added. Please, see samples in github.com.</PackageReleaseNotes>
+		<PackageReleaseNotes>nuget-version synchronization</PackageReleaseNotes>
 		<PackageIcon>logo.png</PackageIcon>
 		<Title>Rules validation pipeline</Title>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
