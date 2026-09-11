@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Calabonga.RulesValidator/Calabonga.RulesValidator.csproj" />
+  <Project Path="Calabonga.RulesValidator.Tests/Calabonga.RulesValidator.Tests.csproj" />
+</Solution>

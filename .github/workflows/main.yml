@@ -14,18 +14,18 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up .NET Core
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
 
       - name: Install dependencies Calabonga.RulesValidator
-        run: dotnet restore src/Calabonga.RulesValidator/Calabonga.RulesValidator.sln
+        run: dotnet restore src/Calabonga.RulesValidator/Calabonga.RulesValidator.slnx
 
       - name: Build the NuGet package Calabonga.RulesValidator
-        run: dotnet build src/Calabonga.RulesValidator/Calabonga.RulesValidator.sln --configuration Release --output ${{env.DOTNET_ROOT}}\Package1
+        run: dotnet build src/Calabonga.RulesValidator/Calabonga.RulesValidator.slnx --configuration Release --output ${{env.DOTNET_ROOT}}\Package1
         
       - name: Publish NuGet Package Calabonga.RulesValidator
         run: dotnet nuget push ${{env.DOTNET_ROOT}}\Package1\*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
